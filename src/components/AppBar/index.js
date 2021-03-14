@@ -154,7 +154,7 @@ export default function SearchAppBar() {
             <MenuIcon />
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
-            Material-UI
+            Panda Fun
           </Typography>
           <div className={classes.search}>
          

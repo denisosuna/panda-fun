@@ -8,7 +8,7 @@ import SearchForm from "components/SearchForm";
 import { Helmet } from "react-helmet";
 
 export default function SearchResults({ match }) {
-  const { keyword, rating = "g" } = match.params;
+  const { keyword, rating } = match.params;
 
 
   const { loading, gifs, setPage } = useGifs({ keyword,rating });

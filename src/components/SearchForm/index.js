@@ -1,16 +1,24 @@
-import React, { useState } from "react";
+import React from "react";
 import css from "./SearchForm.module.css";
 import { useHistory } from "react-router-dom";
-import SearchIcon from '@material-ui/icons/Search';
+import SearchIcon from "@material-ui/icons/Search";
+import useForm from "./hooks";
+
 const RATINGS = ["g", "pg", "pg-13", "r"];
 
-export default function SearchForm({ initialKeyword = "", initialRating }) {
-  const [keyword, setKeyword] = useState(decodeURIComponent(initialKeyword));
-  const [rating, setRating] = useState(initialRating);
+export default function SearchForm({
+  initialKeyword = "",
+  initialRating = "g",
+}) {
   let history = useHistory();
 
+  const { keyword, rating, updateKeyword, updateRating } = useForm({
+    initialKeyword,
+    initialRating,
+  });
+
   const handleChange = (evt) => {
-    setKeyword(evt.target.value);
+    updateKeyword(evt.target.value);
   };
 
   const handleSubmit = (evt) => {
@@ -18,21 +26,28 @@ export default function SearchForm({ initialKeyword = "", initialRating }) {
     history.push(`/search/${keyword}/${rating}`);
   };
   const handleChangeRatings = (evt) => {
-    setRating(evt.target.value);
+    updateRating(evt.target.value);
   };
 
   return (
     <form onSubmit={handleSubmit} className={css["c-search"]}>
-      <button className={css["c-search-btn"]}><SearchIcon/></button>
+      <button className={css["c-search-btn"]}>
+        <SearchIcon />
+      </button>
       <input
+        required
         className={css["c-search-input"]}
         placeholder="Busca un Gif Aquí..."
         onChange={handleChange}
         type="text"
         value={keyword}
       />
-      <select className={css["c-search-select"]} value={rating} onChange={handleChangeRatings}>
-        <option disabled>Rating Type</option>
+      <select
+        className={css["c-search-select"]}
+        value={rating}
+        onChange={handleChangeRatings}
+      >
+        <option disabled>Rating</option>
         {RATINGS.map((rating) => (
           <option key={rating}>{rating}</option>
         ))}

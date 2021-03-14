@@ -4,7 +4,9 @@ const CURRENT_CACHE = `main-${CACHE_VERSION}`;
 
 // these are the routes we are going to cache for offline support
 const cacheFiles = [
-  '/public/favicon.ico'
+  '/public/favicon.ico',
+  '/public/logo512.png',
+  '/public/logo192.png',
 ];
 
 

@@ -1,0 +1,14 @@
+[debug] [2021-03-14T18:31:16.127Z] ----------------------------------------------------------------------
+[debug] [2021-03-14T18:31:16.129Z] Command:       /usr/bin/node /usr/bin/firebase deploy
+[debug] [2021-03-14T18:31:16.129Z] CLI Version:   9.4.0
+[debug] [2021-03-14T18:31:16.129Z] Platform:      linux
+[debug] [2021-03-14T18:31:16.129Z] Node Version:  v12.18.3
+[debug] [2021-03-14T18:31:16.130Z] Time:          Sun Mar 14 2021 14:31:16 GMT-0400 (GMT-04:00)
+[debug] [2021-03-14T18:31:16.130Z] ----------------------------------------------------------------------
+[debug] [2021-03-14T18:31:16.130Z] 
+[debug] [2021-03-14T18:31:16.135Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-03-14T18:31:16.135Z] > authorizing via signed-in user
+[debug] [2021-03-14T18:31:16.135Z] [iam] checking project pandafun-2021 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-03-14T18:31:16.137Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-03-14T18:31:16.137Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>

@@ -31,7 +31,7 @@ export default function App() {
             <GifsContextProvider>
               <Switch>
                 <Route exact path="/" component={Home} />
-                <Route path="/search/:keyword" component={SearchResults} />
+                <Route path="/search/:keyword/:rating?" component={SearchResults} />
                 <Route path="/gif/:id" component={Detail} />
                 <Route exact path="/404" component={Error404} />
               </Switch>

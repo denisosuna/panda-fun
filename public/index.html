@@ -5,18 +5,41 @@
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-
-   
+    <meta name="description" content="Memes and Gif App" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
- 
+
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>Panda Fun</title>
 
-  
-
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-NNZTTZ2BXG"
+    ></script>
+    <script>
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      (window.dataLayer = window.dataLayer || []),
+        gtag("js", new Date()),
+        gtag("config", "G-NNZTTZ2BXG");
+    </script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("/serviceWorker.js")
+            .then((registration) => {
+              console.log("SW registered: ", registration);
+            })
+            .catch((registrationError) => {
+              console.log("SW registration failed: ", registrationError);
+            });
+        });
+      }
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-
   </body>
 </html>

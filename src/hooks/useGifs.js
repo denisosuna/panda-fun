@@ -4,7 +4,7 @@ import { getGifs } from "services/giphy";
 
 const INITIAL_PAGE = 0;
 
-export function useGifs({ keyword } = { keyword: null }) {
+export function useGifs({ keyword, rating } = { keyword: null }) {
   const { gifs, setGifs } = useContext(GifsContext);
   const [loading, setLoading] = useState(false);
   const [loadingNextPage, setLoadingNextPage] = useState(false);
@@ -14,23 +14,23 @@ export function useGifs({ keyword } = { keyword: null }) {
   useEffect(() => {
     setLoading(true);
     //Recuperamos la keyword del localStorage
-    getGifs({ keyword: keywordToUSe }).then((gifs) => {
+    getGifs({ keyword: keywordToUSe, rating }).then((gifs) => {
       setGifs(gifs);
       setLoading(false);
       localStorage.lastKeyword = keywordToUSe;
     });
-  }, [keyword]);
+  }, [keyword,rating]);
 
   useEffect(() => {
     if (page !== INITIAL_PAGE) {
     setLoadingNextPage(true);
-    getGifs({ keyword: keywordToUSe, page }).then(nextgifs => {
+    getGifs({ keyword: keywordToUSe, page,rating }).then(nextgifs => {
       setGifs(prevGift => prevGift.concat(nextgifs));
       setLoadingNextPage(false);
       localStorage.lastKeyword = keywordToUSe;
     });
     }
-  }, [keyword, page]);
+  }, [keyword, page,rating]);
 
   return { loading, loadingNextPage, gifs, setPage,page };
 }

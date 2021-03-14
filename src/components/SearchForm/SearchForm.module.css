@@ -15,6 +15,16 @@
     font-size: 16px;
   }
 
+  .c-search-select {
+    background: var(--brand-color_3);
+    border: 0;
+    color: #fff;
+    padding: 5px 5px;
+    font-size: 16px;
+    max-width: 3rem;
+  }
+
+
   .c-search-input {
     font-size: 16px;
     border: none;

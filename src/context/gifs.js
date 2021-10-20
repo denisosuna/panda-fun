@@ -5,17 +5,6 @@ export const GifsContext = React.createContext();
 
 export function GifsContextProvider({ children }) {
   const [gifs, setGifs] = useState([]);
-/*
-  const setGifs = (valor) => {
-    setGif(valor);
-    if (valor) {
-      localStorage.Gifs = JSON.stringify(valor);
-    }
-  };
-
-  const gifs = gif.length > 0 ? gif : JSON.parse(localStorage.Gifs);
-*/
-
 
 
   return (

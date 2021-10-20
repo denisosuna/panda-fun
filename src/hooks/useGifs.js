@@ -19,7 +19,7 @@ export function useGifs({ keyword, rating } = { keyword: null }) {
       setLoading(false);
       localStorage.lastKeyword = keywordToUSe;
     });
-  }, [keyword,rating]);
+  }, [keyword,rating,keywordToUSe,setGifs]);
 
   useEffect(() => {
     if (page !== INITIAL_PAGE) {
@@ -30,7 +30,7 @@ export function useGifs({ keyword, rating } = { keyword: null }) {
       localStorage.lastKeyword = keywordToUSe;
     });
     }
-  }, [keyword, page,rating]);
+  }, [keyword, page,rating,keywordToUSe,setGifs]);
 
   return { loading, loadingNextPage, gifs, setPage,page };
 }

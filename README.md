@@ -26,7 +26,6 @@
 
 # [Live Version Here](http://panda-fun.vercel.app/)
 
-![discover](docs/discover.png)
 
 ## Table of Contents
 
@@ -49,7 +48,7 @@ gifs suggested by the application and sorted by popularity.
 
 ## Using the App
 
-- Discover the most popular gofs at the moment on the front page
+- Discover the most popular gifs at the moment on the front page
 
 - Click on specific gift to view full-size
 
@@ -61,7 +60,6 @@ gifs suggested by the application and sorted by popularity.
 
 ![javascript][]
 ![react][]
-[![Framework][badge-framework]][framework-url]
 ![css][]
 
 - Using Create React App (CRA)
